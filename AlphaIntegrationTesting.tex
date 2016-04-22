@@ -109,8 +109,11 @@
 \section{Functional Testing}
 	\subsection{Reporting}
 		\subsubsection{Implementation}
+		The integration system gains access to the reporting module via an interface called IReporting. This provides the system with two functions, each to get a different category of report (Progress or Accreditation Unit). The team has implemented all the functions necessary to integrate the Reporting module and all functions run as expected. Comprehensive unit tests have been written by the Alpha team and all tests pass - this includes tests which execute a request for a report without trouble, as well as requests which expect exceptions. The Alpha Team has implemented custom Exceptions for invalid Report parameters among other things, and these Exceptions are caught and handled accordingly. The integration of the reporting module includes a REST layer which consumes a JSON Object (request) and generates a Response instance to return. They utilized the Spring framework for dependency injection and stateless entity beans are used for the different entities.
 		\subsubsection{Short-comings}
+		There does not appear to be any shortcomings in the integration of the reporting system.
 		\subsubsection{Missing}
+		There are no functions missing.
 		
 	\subsection{Notifications}
 		\subsubsection{Implementation}
