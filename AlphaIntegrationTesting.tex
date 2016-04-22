@@ -142,7 +142,22 @@
 
 \section{Architectural Compliance}
 	\subsection{Reporting}
-		\subsubsection{Software Architecture Adhered}
+		\subsubsection{Quality Requirements}
+		 	\paragraph{Flexibility}
+		 	Due to the independence between the integration module and the reporting module, this part of the system is quite flexible. One could swap out the reporting module for a different system without too much trouble, if requests are still sent in an appropriate format (JSON). This is enhanced with the dependency injection used.
+            \paragraph{Maintainability}
+            The system is poorly documented, which makes maintenance more difficult for a third-party developer. On the other hand, the system uses technologies we believe will be in regular use for the foreseeable future. Furthermore, despite the lack of documentation, the system does have a rather logical structure which should assist a new developer in understanding the system. Maintainability is, however, slightly hampered by the main Reporting interface, since it requires a unique function for each report category and adding a category may be difficult.
+            \paragraph{Scalability}
+            \paragraph{Performance requirements}
+            \paragraph{Reliability}
+            \paragraph{Security}
+            \paragraph{Auditability}
+            There is no logging functionality evident withing the reporting integration itself. Exceptions are thrown, but are either caught and ignored, or caught in the unit tests. Successes are not logged, and it does not seem any other activity is either. Calls to services are, however logged, higher up in the system but these are not specific to the reporting.
+            \paragraph{Testability}
+            This system is testable with built-in unit tests - as requested in the master spec. There are mock objects provided for unit testing and integration testing.
+            \paragraph{Usability}
+            \paragraph{Integrability}
+            \paragraph{Deployability}
 		\subsubsection{Software Architecture Partially Adhered}
 		\subsubsection{Software Architecture Not Adhered}		
 		
