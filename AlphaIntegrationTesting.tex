@@ -115,7 +115,32 @@
 
 	\subsection{Missing functionality}
 		There is no other functionality to modify a publication such as to change publication state ,add publication type, modify publication type and also to getPublicationForPerson,getPublicationForGroup and calculate Accreditation points for both group and person.
-
+		
+\section{Publication Architecture Compliance}
+    \subsection{Flexibility}
+    The integration code complies to this requirement because it has the ability to deploy different versions of the system with as little down-time as possible. This is partly due to the decoupled nature of the integration and publication sections. The code also makes use of dependency injection for contract based software development.
+    
+    \subsection{Maintainability}
+    The code has very little to no documentation, which makes it very difficult for developers that did not on the system initially to be able to understand the code.
+    
+    \subsection{Scalability}
+    The system is able to store a large amount of the department's publication meta data on the database without any difficulty.
+    
+    \subsection{Performance Requirements}
+    All the the services of Publication operate within the required time of 0.2 seconds.
+    
+    \subsection{Auditability}
+    The system does not log any of the requests, responses and exceptions of the publication services.
+    
+    
+    \subsection{Reliability}
+    The service requests are fully implemented and can be fully executed for each service contract for the publication section. It also supports commit and rollback functionality for the database.
+    
+    \subsection{Security}
+    The integration code does not check the authorisation of the user for the services that only should be used by specific users. For example, the addPublicationType service should only allow administrators to use it. This is not implemented.
+    
+    \subsection{Testability}
+    Junit is used for out-of-container testing to test the publication section. Embedded container unit testing is not used, however, this is listed as a nice-to-have.
 
 \newpage
 \section{Front-end Interfaces: Web and Android Development}
