@@ -119,9 +119,9 @@
         \subsubsection{Implementation}
         Unit tests were performed for all the functionality within the notification module.Dependency injection was used through the spring framework and everything worked.J unit was used accordingly and all the test cases that were written passed.
         \subsubsection{Short-comings}
-        There are no short comings, all functionality specified by the specification were implemented.
+        There is only one short-coming, the notification is sent out correctly, but the scheduling does not work accordingly. 
         \subsubsection{Missing}
-        
+        There is no missing functionality, just that the above mentioned is not working correctly.
     \subsection{People}
         \subsubsection{Implementation}
 		The people module is accessed via an interface specified as IPeople. This is then implemented in the defaultImpl package where all methods return null, enabling the system to compile and pass all build tests. The functionality of the People module has been extensively mocked and tested withing the testing framework. Expected values were checked to make sure the correct objects were being handled and returned. They were sure to include all the exceptions that needed be thrown if an error occured and showed comprehensive use of the assert library functions. Alpha Integration had an extensive exception library, making sure to have an exception class for each and every possible exception that may occur. The seemless integration of this module is apparrent that the layout was well thought out. A request object is sent in, encapsulating various necessary information to perform a function. A response object is returned to notify the system of the status of the function's execution.
