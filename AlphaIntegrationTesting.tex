@@ -132,16 +132,19 @@
         
     \subsection{Publications}
         \subsubsection{Implementation}
-            The integration functionality to get a publication works, it takes in a json object request and returns a response with is a json object.if the publication does not exist the is a catch an exception or if the request in not valid it will catch an exception. for that they use a rest layer. This is the only functionality implemented by the integration team for publication.
+            The integration functionality to get a publication works, it takes in a JSON object request and returns a response with is a JSON object.if the publication does not exist the is a catch an exception or if the request in not valid it will catch an exception. for that they use a rest layer. This is the only functionality implemented by the integration team for publication.
         \subsubsection{Short-comings}
-        There were no short commings in the get pulbication function
+        There were no short comings in the get publication function
         \subsubsection{Missing}
         There is no other functionality to modify a publication such as to change publication state ,add publication type, modify publication type and also to getPublicationForPerson,getPublicationForGroup and calculate Accreditation points for both group and person.
         
-    \subsection{Integration/Interface}
+    \subsection{Interface}
         \subsubsection{Implementation}
+        The integration functionality, in terms of integrating the rest of the back-end with the interface or front-end for both the web interface and android, was to have communication between the front and back-ends through AJAX calls to get or post new information to be displayed or stored. The web interface used ember and mirage server to handle the calls and create a mock database. Requests are made through user interaction which will send either GET requests if the user wants to retrieve information to display your use and will use POST requests if the user wants to update the database. other requests such as PUT, PATCH and DELETE which is needed to be compliant with the RESTful API.
         \subsubsection{Short-comings}
+        Since the integration team did not implement any integration of front and back-end, there was no code to test.
         \subsubsection{Missing}
+        There is no functionality put in place for the integration of web or android code with any of the other back-end modules and so the section as a whole is missing.
 
 \section{Architectural Compliance}
     \subsection{Reporting}
