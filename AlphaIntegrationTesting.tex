@@ -24,36 +24,36 @@
 \begin{document}
 
 \begin{titlepage}
-	\begin{center}
-		\line(1,0){300}\\
-		[6mm]
-		\huge{\bfseries Testing - Alpha Integration}\\
-		[2mm]
-		\line(1,0){200}\\
-		[15mm]
-		\textsc{\large Members}\\
-		[7.5mm]
-		\textsc{
-                \large14011396	Grobler	A (Arno) \\
-                14103207	Mogase	L (Lethabo)\\
-                12017800	Maree	AA (Armand)\\
-                12059138	Saaiman	C (Christiaan)\\
-                13027205	Smallwood	DW (Duncan)\\
-                13040686	Nyuswa	ML (Maluleki)\\
-                14035538	Heins	D (Dillon)\\
-                14395283	Alberts	JD (Josef)\\
-                12031748	Khumalo	S (Sandile)\\
-                13278012	Muranga	KJ (Kudzai)\\
-                14222583	Molefe	KP (Keletso)\\
+    \begin{center}
+        \line(1,0){300}\\
+        [6mm]
+        \huge{\bfseries Testing - Alpha Integration}\\
+        [2mm]
+        \line(1,0){200}\\
+        [15mm]
+        \textsc{\large Members}\\
+        [7.5mm]
+        \textsc{
+                \large14011396  Grobler A (Arno) \\
+                14103207    Mogase  L (Lethabo)\\
+                12017800    Maree   AA (Armand)\\
+                12059138    Saaiman C (Christiaan)\\
+                13027205    Smallwood   DW (Duncan)\\
+                13040686    Nyuswa  ML (Maluleki)\\
+                14035538    Heins   D (Dillon)\\
+                14395283    Alberts JD (Josef)\\
+                12031748    Khumalo S (Sandile)\\
+                13278012    Muranga KJ (Kudzai)\\
+                14222583    Molefe  KP (Keletso)\\
             }
-		[8cm]
-	\end{center}
-	
-	\begin{flushright}
-		\textsc{\large Lorem\\
-		Ipsum\\
-		20 April 2016\\}
-	\end{flushright}
+        [8cm]
+    \end{center}
+    
+    \begin{flushright}
+        \textsc{\large Lorem\\
+        Ipsum\\
+        20 April 2016\\}
+    \end{flushright}
 \end{titlepage}
 
 % Table of contents
@@ -107,47 +107,47 @@
             \item Deployability
         \end{itemize}
 \section{Functional Testing}
-	\subsection{Reporting}
-		\subsubsection{Implementation}
-		The integration system gains access to the reporting module via an interface called IReporting. This provides the system with two functions, each to get a different category of report (Progress or Accreditation Unit). The team has implemented all the functions necessary to integrate the Reporting module and all functions run as expected. Comprehensive unit tests have been written by the Alpha team and all tests pass - this includes tests which execute a request for a report without trouble, as well as requests which expect exceptions. The Alpha Team has implemented custom Exceptions for invalid Report parameters among other things, and these Exceptions are caught and handled accordingly. The integration of the reporting module includes a REST layer which consumes a JSON Object (request) and generates a Response instance to return. They utilized the Spring framework for dependency injection and stateless entity beans are used for the different entities.
-		\subsubsection{Short-comings}
-		There does not appear to be any shortcomings in the integration of the reporting system.
-		\subsubsection{Missing}
-		There are no functions missing.
-		
-	\subsection{Notifications}
-		\subsubsection{Implementation}
-		Unit tests were performed for all the functionality within the notification module.Dependency injection was used through the spring framework and everything worked.J unit was used accordingly and all the test cases that were written passed.
-		\subsubsection{Short-comings}
-		There are no short comings, all functionality specified by the specification were implemented.
-		\subsubsection{Missing}
-		
-	\subsection{People}
-		\subsubsection{Implementation}
-		The people module is accessed via an interface specified as IPeople. This is then implemented in the defaultImpl package where all methods return null, enabling the system to compile and pass all build tests. The functionality of the People module has been extensively mocked and tested withing the testing framework. Expected values were checked to make sure the correct objects were being handled and returned. They were sure to include all the exceptions that needed be thrown if an error occured and showed comprehensive use of the assert library functions. Alpha Integration had an extensive exception library, making sure to have an exception class for each and every possible exception that may occur. The seemless integration of this module is apparrent that the layout was well thought out. A request object is sent in, encapsulating various necessary information to perform a function. A response object is returned to notify the system of the status of the function's execution.
-		\subsubsection{Short-comings}
-		Short-comings aren't present in the testing and integration of the People module. Everything was covered to the edge and beyond.
-		\subsubsection{Missing}
-		There are no functions missing.
-		
-	\subsection{Publications}
-		\subsubsection{Implementation}
-			The integration functionality to get a publication works, it takes in a json object request and returns a response with is a json object.if the publication does not exist the is a catch an exception or if the request in not valid it will catch an exception. for that they use a rest layer. This is the only functionality implemented by the integration team for publication.
-		\subsubsection{Short-comings}
-		There were no short commings in the get pulbication function
-		\subsubsection{Missing}
-		There is no other functionality to modify a publication such as to change publication state ,add publication type, modify publication type and also to getPublicationForPerson,getPublicationForGroup and calculate Accreditation points for both group and person.
-		
-	\subsection{Integration/Interface}
-		\subsubsection{Implementation}
-		\subsubsection{Short-comings}
-		\subsubsection{Missing}
+    \subsection{Reporting}
+        \subsubsection{Implementation}
+        The integration system gains access to the reporting module via an interface called IReporting. This provides the system with two functions, each to get a different category of report (Progress or Accreditation Unit). The team has implemented all the functions necessary to integrate the Reporting module and all functions run as expected. Comprehensive unit tests have been written by the Alpha team and all tests pass - this includes tests which execute a request for a report without trouble, as well as requests which expect exceptions. The Alpha Team has implemented custom Exceptions for invalid Report parameters among other things, and these Exceptions are caught and handled accordingly. The integration of the reporting module includes a REST layer which consumes a JSON Object (request) and generates a Response instance to return. They utilized the Spring framework for dependency injection and stateless entity beans are used for the different entities.
+        \subsubsection{Short-comings}
+        There does not appear to be any shortcomings in the integration of the reporting system.
+        \subsubsection{Missing}
+        There are no functions missing.
+        
+    \subsection{Notifications}
+        \subsubsection{Implementation}
+        Unit tests were performed for all the functionality within the notification module.Dependency injection was used through the spring framework and everything worked.J unit was used accordingly and all the test cases that were written passed.
+        \subsubsection{Short-comings}
+        There are no short comings, all functionality specified by the specification were implemented.
+        \subsubsection{Missing}
+        
+    \subsection{People}
+        \subsubsection{Implementation}
+        The people module is accessed via an interface specified as IPeople. This is then implemented in the defaultImpl package where all methods return null, enabling the system to compile and pass all build tests. The functionality of the People module has been extensively mocked and tested withing the testing framework. Expected values were checked to make sure the correct objects were being handled and returned. They were sure to include all the exceptions that needed be thrown if an error occured and showed comprehensive use of the assert library functions. Alpha Integration had an extensive exception library, making sure to have an exception class for each and every possible exception that may occur. The seemless integration of this module is apparrent that the layout was well thought out. A request object is sent in, encapsulating various necessary information to perform a function. A response object is returned to notify the system of the status of the function's execution.
+        \subsubsection{Short-comings}
+        Short-comings aren't present in the testing and integration of the People module. Everything was covered to the edge and beyond.
+        \subsubsection{Missing}
+        There are no functions missing.
+        
+    \subsection{Publications}
+        \subsubsection{Implementation}
+            The integration functionality to get a publication works, it takes in a json object request and returns a response with is a json object.if the publication does not exist the is a catch an exception or if the request in not valid it will catch an exception. for that they use a rest layer. This is the only functionality implemented by the integration team for publication.
+        \subsubsection{Short-comings}
+        There were no short commings in the get pulbication function
+        \subsubsection{Missing}
+        There is no other functionality to modify a publication such as to change publication state ,add publication type, modify publication type and also to getPublicationForPerson,getPublicationForGroup and calculate Accreditation points for both group and person.
+        
+    \subsection{Integration/Interface}
+        \subsubsection{Implementation}
+        \subsubsection{Short-comings}
+        \subsubsection{Missing}
 
 \section{Architectural Compliance}
-	\subsection{Reporting}
-		\subsubsection{Quality Requirements}
-		 	\paragraph{Flexibility}
-		 	Due to the independence between the integration module and the reporting module, this part of the system is quite flexible. One could swap out the reporting module for a different system without too much trouble, if requests are still sent in an appropriate format (JSON). This is enhanced with the dependency injection used.
+    \subsection{Reporting}
+        \subsubsection{Quality Requirements}
+            \paragraph{Flexibility}
+            Due to the independence between the integration module and the reporting module, this part of the system is quite flexible. One could swap out the reporting module for a different system without too much trouble, if requests are still sent in an appropriate format (JSON). This is enhanced with the dependency injection used.
             \paragraph{Maintainability}
             The system is poorly documented, which makes maintenance more difficult for a third-party developer. On the other hand, the system uses technologies we believe will be in regular use for the foreseeable future. Furthermore, despite the lack of documentation, the system does have a rather logical structure which should assist a new developer in understanding the system. Maintainability is, however, slightly hampered by the main Reporting interface, since it requires a unique function for each report category and adding a category may be difficult.
             \paragraph{Scalability}
@@ -161,29 +161,29 @@
             \paragraph{Usability}
             \paragraph{Integrability}
             \paragraph{Deployability}
-		\subsubsection{Software Architecture Partially Adhered}
-		\subsubsection{Software Architecture Not Adhered}		
-		
-	\subsection{Notifications}
-		\subsubsection{Software Architecture Adhered}
-		\subsubsection{Software Architecture Partially Adhered}
-		\subsubsection{Software Architecture Not Adhered}		
-		
-	\subsection{People}
-		\subsubsection{Software Architecture Adhered}
-		\subsubsection{Software Architecture Partially Adhered}
-		\subsubsection{Software Architecture Not Adhered}		
-		
-	\subsection{Publications}
-		\subsubsection{Software Architecture Adhered}
-		\subsubsection{Software Architecture Partially Adhered}
-		\subsubsection{Software Architecture Not Adhered}		
-		
-	\subsection{Integration/Interface}
-		\subsubsection{Software Architecture Adhered}
-		\subsubsection{Software Architecture Partially Adhered}
-		\subsubsection{Software Architecture Not Adhered}		
-		
+        \subsubsection{Software Architecture Partially Adhered}
+        \subsubsection{Software Architecture Not Adhered}       
+        
+    \subsection{Notifications}
+        \subsubsection{Software Architecture Adhered}
+        \subsubsection{Software Architecture Partially Adhered}
+        \subsubsection{Software Architecture Not Adhered}       
+        
+    \subsection{People}
+        \subsubsection{Software Architecture Adhered}
+        \subsubsection{Software Architecture Partially Adhered}
+        \subsubsection{Software Architecture Not Adhered}       
+        
+    \subsection{Publications}
+        \subsubsection{Software Architecture Adhered}
+        \subsubsection{Software Architecture Partially Adhered}
+        \subsubsection{Software Architecture Not Adhered}       
+        
+    \subsection{Integration/Interface}
+        \subsubsection{Software Architecture Adhered}
+        \subsubsection{Software Architecture Partially Adhered}
+        \subsubsection{Software Architecture Not Adhered}       
+        
 \section{Publication Architecture Compliance}
     \subsection{Flexibility}
     The integration code complies to this requirement because it has the ability to deploy different versions of the system with as little down-time as possible. This is partly due to the decoupled nature of the integration and publication sections. The code also makes use of dependency injection for contract based software development.
@@ -211,42 +211,9 @@
     Junit is used for out-of-container testing to test the publication section. Embedded container unit testing is not used, however, this is listed as a nice-to-have.
 
 \newpage
-\section{Front-end Interfaces: Web and Android Development}
-        Front end developers were tasked to use information from the back-end, such as database objects and requests and display it in a way that is user friendly to the user and intuitive for the designer. The interface also needs to provide the user easy tools to make requests to the back-end without the user having to worry about actual functionality of the system.
-\subsection{Web Development}
-        \subsubsection{Flexibility}
-        \subsubsection{Maintainability}
-        \subsubsection{Scalability}
-        \subsubsection{Performance requirements}
-        \subsubsection{Reliability}
-        \subsubsection{Security}
-        \subsubsection{Auditability}
-        \subsubsection{Testability}
-        \subsubsection{Usability}
-        \subsubsection{Integrability}
-        \subsubsection{Deployability}
-        \subsubsection{Correctly implemented functionality}
-        \subsubsection{Short-comings of the implemented functionality}
-        \subsubsection{Missing functionality}
-\subsection{Android}
-        \subsubsection{Flexibility}
-        \subsubsection{Maintainability}
-        \subsubsection{Scalability}
-        \subsubsection{Performance requirements}
-        \subsubsection{Reliability}
-        \subsubsection{Security}
-        \subsubsection{Auditability}
-        \subsubsection{Testability}
-        \subsubsection{Usability}
-        \subsubsection{Integrability}
-        \subsubsection{Deployability}
-        \subsubsection{Correctly implemented functionality}
-        \subsubsection{Short-comings of the implemented functionality}
-        \subsubsection{Missing functionality}
-        
-        \subsection{Alpha People}
+\section{Alpha People}
 \subsubsection{Functional Testing}
-	Functional testing was partially implemented on the functionalities in the Person module. The test cases where coded and documented but did not cover all cases.
+    Functional testing was partially implemented on the functionalities in the Person module. The test cases where coded and documented but did not cover all cases.
 %\subsubsubsection{Functionality Implementation}
 \paragraph{Functionality Implementation}
 %\subsubsubsection{Functionality Short-comings}
