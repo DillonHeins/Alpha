@@ -70,7 +70,7 @@
 \section{Introduction}\label{sec:intro}
     This project is a Research Support System. Its main purpose is to keep track of many aspects that are regularly needed by researchers and an easy way for research heads or HOD of the respective facility to be able to see progress that has been made by the researchers in their team.
     
-    Scope for this project is only the Computer Science department and its respective lecturers and leaders.
+    The scope for this project is only the Computer Science department and its respective lecturers and leaders.
     General uses of this system should include keeping track of:
     \begin{itemize}
         \item Research Papers
@@ -148,13 +148,23 @@
 
     \subsection{Integration}
 		\subsubsection{Implementation}
+			The system as a whole has been implemented well in terms of functional requirements. Service contracts have been mapped onto interfaces for each of the individual modules. The scope of functionality for each module has been adhered to and provisions have been made to ensure the system caters for all of these required functionalities. Domain models have been followed correctly and care has been taken in order to implement custom exception, request and response objects.
+			\paragraph{Use Case Prioritisation:}
+			Critical, important and nice-to-have use cases have been mapped onto interfaces for the most part. The most critical use cases have been catered for.
+			\paragraph{Service Contracts:}
+			As mentioned before the service contracts have all been mapped correctly onto interfaces. All service contracts and modules have been accounted for. Pre-conditions and post-conditions have been adhered to and are tested through the use of mock objects and test cases for each individual module. The request and result data structures have been created and implemented correctly.
+			\paragraph{Required Functionality:}
+			Provisions have been made to ensure that the services offered by each module are accounted for. The integration code has tests to insure the dependency which is injected implements as well as adheres to these required functionalities correctly.
+			\paragraph{Process Specifications:}
+			
 		\subsubsection{Short-comings}
+			
 		\subsubsection{Missing}
 
 \section{Architectural Compliance}
     \subsection{Reporting}
         \subsubsection{Quality Requirements}
-            \paragraph{Flexibility}
+            \paragraph{Flexibility:}
             Due to the independence between the integration module and the reporting module, this part of the system is quite flexible. One could swap out the reporting module for a different system without too much trouble, if requests are still sent in an appropriate format (JSON). This is enhanced with the dependency injection used.
             \paragraph{Maintainability}
             The system is poorly documented, which makes maintenance more difficult for a third-party developer. On the other hand, the system uses technologies we believe will be in regular use for the foreseeable future. Furthermore, despite the lack of documentation, the system does have a rather logical structure which should assist a new developer in understanding the system. Maintainability is, however, slightly hampered by the main Reporting interface, since it requires a unique function for each report category and adding a category may be difficult.
