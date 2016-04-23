@@ -24,29 +24,30 @@
 \begin{document}
 
 \begin{titlepage}
-	\begin{center}
-		\line(1,0){300}\\
-		[6mm]
-		\huge{\bfseries Testing - Alpha Integration}\\
-		[2mm]
-		\line(1,0){200}\\
-		[15mm]
-		\textsc{\large Members}\\
-		[7.5mm]
-		\textsc{
-                \large14011396	Grobler	A (Arno) \\
-                14103207	Mogase	L (Lethabo)\\
-                12017800	Maree	AA (Armand)\\
-                12059138	Saaiman	C (Christiaan)\\
-                13027205	Smallwood	DW (Duncan)\\
-                13040686	Nyuswa	ML (Maluleki)\\
-                14035538	Heins	D (Dillon)\\
-                14395283	Alberts	JD (Josef)\\
-                12031748	Khumalo	S (Sandile)\\
-                13278012	Muranga	KJ (Kudzai)\\
-                14222583	Molefe	KP (Keletso)\\
+    \begin{center}
+        \line(1,0){300}\\
+        [6mm]
+        \huge{\bfseries Testing - Alpha Integration}\\
+        [2mm]
+        \line(1,0){200}\\
+        [15mm]
+        \textsc{\large Members}\\
+        [7.5mm]
+        \textsc{
+                \large14011396  Grobler A (Arno) \\
+                14103207    Mogase  L (Lethabo)\\
+                12017800    Maree   AA (Armand)\\
+                12059138    Saaiman C (Christiaan)\\
+                13027205    Smallwood   DW (Duncan)\\
+                13040686    Nyuswa  ML (Maluleki)\\
+                14035538    Heins   D (Dillon)\\
+                14395283    Alberts JD (Josef)\\
+                12031748    Khumalo S (Sandile)\\
+                13278012    Muranga KJ (Kudzai)\\
+                14222583    Molefe  KP (Keletso)\\
+                [8cm]
             }
-		[8cm]
+
     \end{center}
 
     \begin{flushright}
@@ -124,20 +125,20 @@
         There is no missing functionality, just that the above mentioned is not working correctly.
     \subsection{People}
         \subsubsection{Implementation}
-		The people module is accessed via an interface specified as IPeople. This is then implemented in the defaultImpl package where all methods return null, enabling the system to compile and pass all build tests. The functionality of the People module has been extensively mocked and tested withing the testing framework. Expected values were checked to make sure the correct objects were being handled and returned. They were sure to include all the exceptions that needed be thrown if an error occured and showed comprehensive use of the assert library functions. Alpha Integration had an extensive exception library, making sure to have an exception class for each and every possible exception that may occur. The seemless integration of this module is apparrent that the layout was well thought out. A request object is sent in, encapsulating various necessary information to perform a function. A response object is returned to notify the system of the status of the function's execution.
-		\subsubsection{Short-comings}
-		Short-comings aren't present in the testing and integration of the People module. Everything was covered to the edge and beyond.
-		\subsubsection{Missing}
-		There are no functions missing.
-		
-	\subsection{Publications}
-		\subsubsection{Implementation}
-			The integration functionality to get a publication works, it takes in a json object request and returns a response with is a json object.if the publication does not exist the is a catch an exception or if the request in not valid it will catch an exception. for that they use a rest layer. This is the only functionality implemented by the integration team for publication.
-		\subsubsection{Short-comings}
-		There were no short commings in the get pulbication function
-		\subsubsection{Missing}
-		There is no other functionality to modify a publication such as to change publication state ,add publication type, modify publication type and also to getPublicationForPerson,getPublicationForGroup and calculate Accreditation points for both group and person.
-		
+        The people module is accessed via an interface specified as IPeople. This is then implemented in the defaultImpl package where all methods return null, enabling the system to compile and pass all build tests. The functionality of the People module has been extensively mocked and tested withing the testing framework. Expected values were checked to make sure the correct objects were being handled and returned. They were sure to include all the exceptions that needed be thrown if an error occurred and showed comprehensive use of the assert library functions. Alpha Integration had an extensive exception library, making sure to have an exception class for each and every possible exception that may occur. The seamless integration of this module is apparent that the layout was well thought out. A request object is sent in, encapsulating various necessary information to perform a function. A response object is returned to notify the system of the status of the function's execution.
+        \subsubsection{Short-comings}
+        Short-comings aren't present in the testing and integration of the People module. Everything was covered to the edge and beyond.
+        \subsubsection{Missing}
+        There are no functions missing.
+        
+    \subsection{Publications}
+        \subsubsection{Implementation}
+            The integration functionality to get a publication works, it takes in a JSON object request and returns a response with is a JSON object.if the publication does not exist the is a catch an exception or if the request in not valid it will catch an exception. for that they use a rest layer. This is the only functionality implemented by the integration team for publication.
+        \subsubsection{Short-comings}
+        There were no short comings in the get publication function
+        \subsubsection{Missing}
+        There is no other functionality to modify a publication such as to change publication state ,add publication type, modify publication type and also to getPublicationForPerson,getPublicationForGroup and calculate Accreditation points for both group and person.
+        
     \subsection{Interface}
         \subsubsection{Implementation}
         The integration functionality, in terms of integrating the rest of the back-end with the interface or front-end for both the web interface and android, was to have communication between the front and back-ends through AJAX calls to get or post new information to be displayed or stored. The web interface used ember and mirage server to handle the calls and create a mock database. Requests are made through user interaction which will send either GET requests if the user wants to retrieve information to display your use and will use POST requests if the user wants to update the database. other requests such as PUT, PATCH and DELETE which is needed to be compliant with the RESTful API.
@@ -147,9 +148,9 @@
         There is no functionality put in place for the integration of web or android code with any of the other back-end modules and so the section as a whole is missing.
 
     \subsection{Integration}
-		\subsubsection{Implementation}
-		\subsubsection{Short-comings}
-		\subsubsection{Missing}
+        \subsubsection{Implementation}
+        \subsubsection{Short-comings}
+        \subsubsection{Missing}
 
 \section{Architectural Compliance}
     \subsection{Reporting}
@@ -186,30 +187,30 @@
         \subsubsection{Software Architecture Adhered}
         \subsubsection{Software Architecture Partially Adhered}
         \subsubsection{Software Architecture Not Adhered}       
-		
-	\subsection{Interface}
-		\subsubsection{Software Architecture Adhered}
-			Since there is no interface in place there is no architecture that was adhered to.
-		\subsubsection{Software Architecture Not Adhered}
-			\begin{itemize}	
-				\item The web interface is supposed to use the Ember.js engine, but there are no traces of any Ember.js code, a server that would house this component or some interface where connections can be established to.
-				\item There is also no trace of a connection point for an Android interface to make requests to.
-			\end{itemize}
-			The integration system does not accomodate the interfaces on any level, thus no software achitecture reqirements can be tested on this section
+        
+    \subsection{Interface}
+        \subsubsection{Software Architecture Adhered}
+            Since there is no interface in place there is no architecture that was adhered to.
+        \subsubsection{Software Architecture Not Adhered}
+            \begin{itemize} 
+                \item The web interface is supposed to use the Ember.js engine, but there are no traces of any Ember.js code, a server that would house this component or some interface where connections can be established to.
+                \item There is also no trace of a connection point for an Android interface to make requests to.
+            \end{itemize}
+            The integration system does not accommodate the interfaces on any level, thus no software architecture requirements can be tested on this section
 
-	\subsection{Integration}
-		\subsubsection{Software Architecture Adhered}
-			\paragraph{Modularity} The system has a very large amount of modularity. In some sections it becomes unnecessarily modular. This will help with future scaling and adding new components to the system.
-			
-		\subsubsection{Software Architecture Partially Adhered}
-			\paragraph{Maintainability} The system is fairly hard to understand and future developers are going to struggle in understanding the code since there is very little to no documentation and comments.
-			\paragraph{Testability} Although some of the components of the system has the ability to be tested, not all components have this functionality. One can thus not be sure whether the entire system is reliable.			
-			
-		\subsubsection{Software Architecture Not Adhered}
-			\paragraph{Reliability} This system is not reliable at all since the code does not even compile. There is also no trace of error checking.
-			\paragraph{Security} There is supposed to be functionality that would only allow certain individuals to do certain actions but there is no functionality that would require an individual to sign in. This would obviously allow unauthorized individuals to request sensitive information without hassle.
-			\paragraph{Auditability} The system has no functionality to log requests and responses made by the system. Thus no one can be held accountable for certain actions that is taken.
-			\paragraph{Deployment} The system does not deploy at all (the code does not compile).
+    \subsection{Integration}
+        \subsubsection{Software Architecture Adhered}
+            \paragraph{Modularity} The system has a very large amount of modularity. In some sections it becomes unnecessarily modular. This will help with future scaling and adding new components to the system.
+            
+        \subsubsection{Software Architecture Partially Adhered}
+            \paragraph{Maintainability} The system is fairly hard to understand and future developers are going to struggle in understanding the code since there is very little to no documentation and comments.
+            \paragraph{Testability} Although some of the components of the system has the ability to be tested, not all components have this functionality. One can thus not be sure whether the entire system is reliable.         
+            
+        \subsubsection{Software Architecture Not Adhered}
+            \paragraph{Reliability} This system is not reliable at all since the code does not even compile. There is also no trace of error checking.
+            \paragraph{Security} There is supposed to be functionality that would only allow certain individuals to do certain actions but there is no functionality that would require an individual to sign in. This would obviously allow unauthorized individuals to request sensitive information without hassle.
+            \paragraph{Auditability} The system has no functionality to log requests and responses made by the system. Thus no one can be held accountable for certain actions that is taken.
+            \paragraph{Deployment} The system does not deploy at all (the code does not compile).
 
 \section{Publication Architecture Compliance}
     \subsection{Flexibility}
