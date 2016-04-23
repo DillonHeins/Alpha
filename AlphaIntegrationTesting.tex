@@ -145,22 +145,36 @@
         Since the integration team did not implement any integration of front and back-end, there was no code to test.
         \subsubsection{Missing}
         There is no functionality put in place for the integration of web or android code with any of the other back-end modules and so the section as a whole is missing.
+        
+\cleardoublepage
 
     \subsection{Integration}
 		\subsubsection{Implementation}
-			The system as a whole has been implemented well in terms of functional requirements. Service contracts have been mapped onto interfaces for each of the individual modules. The scope of functionality for each module has been adhered to and provisions have been made to ensure the system caters for all of these required functionalities. Domain models have been followed correctly and care has been taken in order to implement custom exception, request and response objects.
+			The system as a whole has been implemented well in terms of functional requirements.
+			Service contracts have been mapped onto interfaces for each of the individual modules.
+			The scope of functionality for each module has been adhered to and provisions have been made to ensure the system caters for all of these required functionalities.
+			Domain models have been followed correctly and care has been taken in order to implement custom exception, request and response objects.
 			\paragraph{Use Case Prioritisation:}
-			Critical, important and nice-to-have use cases have been mapped onto interfaces for the most part. The most critical use cases have been catered for.
+			Critical, important and nice-to-have use cases have been mapped onto interfaces for the most part.
+			The most critical use cases have been catered for.
 			\paragraph{Service Contracts:}
-			As mentioned before the service contracts have all been mapped correctly onto interfaces. All service contracts and modules have been accounted for. Pre-conditions and post-conditions have been adhered to and are tested through the use of mock objects and test cases for each individual module. The request and result data structures have been created and implemented correctly.
+			As mentioned before the service contracts have all been mapped correctly onto interfaces.
+			All service contracts and modules have been accounted for.
+			Pre-conditions and post-conditions have been adhered to and are tested through the use of mock objects and test cases for each individual module.
+			The request and result data structures have been created and implemented correctly.
 			\paragraph{Required Functionality:}
-			Provisions have been made to ensure that the services offered by each module are accounted for. The integration code has tests to insure the dependency which is injected implements as well as adheres to these required functionalities correctly.
+			Provisions have been made to ensure that the services offered by each module are accounted for.
+			The integration code has tests to insure the dependency which is injected implements as well as adheres to these required functionalities correctly.
 			\paragraph{Process Specifications:}
-			
+			The integration code has been implemented to obey process specifications. 
+			All services start with a request. There are pre-conditions for each service which lead to different exceptions which could be thrown or which lead to the service being terminated.
+			If all pre-conditions have been met the service returns the correct values. Tests have been implemented to ensure this flow of execution is carried out correctly.
+			\paragraph{Domain Models:}
+			As mentioned before the domain models have been adhered to which in turn has lead to the successful implementation of the service contracts, required functionality and process specifications in terms of data structures implemented.
 		\subsubsection{Short-comings}
-			
+			There are very few short-comings with regards to the integration as a whole in terms of functional requirements.
 		\subsubsection{Missing}
-
+			In terms of functional requirements for integration there is not much missing, if anything at all.
 \section{Architectural Compliance}
     \subsection{Reporting}
         \subsubsection{Quality Requirements}
@@ -245,8 +259,4 @@
 			\paragraph{Security} There is supposed to be functionality that would only allow certain individuals to do certain actions but there is no functionality that would require an individual to sign in. This would obviously allow unauthorized individuals to request sensitive information without hassle.
 			\paragraph{Auditability} The system has no functionality to log requests and responses made by the system. Thus no one can be held accountable for certain actions that is taken.
 			\paragraph{Deployment} The system does not deploy at all (the code does not compile).
-\section{Body}
-\lipsum[1]
-
-
 \end{document}
