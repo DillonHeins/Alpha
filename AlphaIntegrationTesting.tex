@@ -122,6 +122,7 @@
         There is only one short-coming, the notification is sent out correctly, but the scheduling does not work accordingly. 
         \subsubsection{Missing}
         There is no missing functionality, just that the above mentioned is not working correctly.
+
     \subsection{People}
         \subsubsection{Implementation}
 		The people module is accessed via an interface specified as IPeople. This is then implemented in the defaultImpl package where all methods return null, enabling the system to compile and pass all build tests. The functionality of the People module has been extensively mocked and tested within the testing framework. Expected values were checked to make sure the correct objects were being handled and returned. They were sure to include all the exceptions that needed be thrown if an error occurred and showed comprehensive use of the assert library functions. Alpha Integration had an extensive exception library, making sure to have an exception class for each and every possible exception that may occur. The seamless integration of this module is apparent that the layout was well thought out. A request object is sent in, encapsulating various necessary information to perform a function. A response object is returned to notify the system of the status of the function's execution.
@@ -175,26 +176,34 @@
 			There are very few short-comings with regards to the integration as a whole in terms of functional requirements.
 		\subsubsection{Missing}
 			In terms of functional requirements for integration there is not much missing, if anything at all.
+			
+\cleardoublepage			
+			
 \section{Architectural Compliance}
     \subsection{Reporting}
-        \subsubsection{Quality Requirements}
+        \subsubsection{Software Architecture Adhered}
             \paragraph{Flexibility:}
-            Due to the independence between the integration module and the reporting module, this part of the system is quite flexible. One could swap out the reporting module for a different system without too much trouble, if requests are still sent in an appropriate format (JSON). This is enhanced with the dependency injection used.
-            \paragraph{Maintainability}
-            The system is poorly documented, which makes maintenance more difficult for a third-party developer. On the other hand, the system uses technologies we believe will be in regular use for the foreseeable future. Furthermore, despite the lack of documentation, the system does have a rather logical structure which should assist a new developer in understanding the system. Maintainability is, however, slightly hampered by the main Reporting interface, since it requires a unique function for each report category and adding a category may be difficult.
-            \paragraph{Scalability}
-            \paragraph{Performance requirements}
-            \paragraph{Reliability}
-            \paragraph{Security}
-            \paragraph{Auditability}
-            There is no logging functionality evident within the reporting integration itself. Exceptions are thrown, but are either caught and ignored, or caught in the unit tests. Successes are not logged, and it does not seem any other activity is either. Calls to services are, however logged, higher up in the system but these are not specific to the reporting.
-            \paragraph{Testability}
+            Due to the independence between the integration module and the reporting module, this part of the system is quite flexible. One could swap out the reporting module for a different system without too much trouble, if requests are still sent in an appropriate format (JSON). This is enhanced with the dependency injection used.   
+            \paragraph{Scalability:}
+            The reporting module has been built to the spec of what was required. Scalability was not of importance and therefore no provision has been made for any.
+            \paragraph{Testability:}
             This system is testable with built-in unit tests - as requested in the master spec. There are mock objects provided for unit testing and integration testing.
-            \paragraph{Usability}
-            \paragraph{Integrability}
-            \paragraph{Deployability}
         \subsubsection{Software Architecture Partially Adhered}
-        \subsubsection{Software Architecture Not Adhered}       
+        	\paragraph{Maintainability:}
+            The system is poorly documented, which makes maintenance more difficult for a third-party developer. On the other hand, the system uses technologies we believe will be in regular use for the foreseeable future. Furthermore, despite the lack of documentation, the system does have a rather logical structure which should assist a new developer in understanding the system. Maintainability is, however, slightly hampered by the main Reporting interface, since it requires a unique function for each report category and adding a category may be difficult.
+			\paragraph{Performance requirements:}
+            The system has been built in a manner which, if it were to be able run, it would be able to meet the performance requirements. However seeing as it does not, performance requirements have not been met.
+            \paragraph{Integrability:}
+            The data does have integrability to some degree but as there is no security it is easy for that to change.
+        \subsubsection{Software Architecture Not Adhered}
+        	\paragraph{Reliability:}
+            The reporting module's reliability could not be tested as it is not executable.
+            \paragraph{Security:}
+            There is no security or authorisation in place.
+            \paragraph{Auditability:}
+            There is no logging functionality evident within the reporting integration itself. Exceptions are thrown, but are either caught and ignored, or caught in the unit tests. Successes are not logged, and it does not seem any other activity is either. Calls to services are, however logged, higher up in the system but these are not specific to the reporting.
+			\paragraph{Usability:} The system's usability is non-existent as it does not run.
+			\paragraph{Deployability:} The system is unable to be deployed in an easy manner as it does not run.    
         
     \subsection{Notifications}
         \subsubsection{Software Architecture Adhered}
@@ -259,4 +268,5 @@
 			\paragraph{Security} There is supposed to be functionality that would only allow certain individuals to do certain actions but there is no functionality that would require an individual to sign in. This would obviously allow unauthorized individuals to request sensitive information without hassle.
 			\paragraph{Auditability} The system has no functionality to log requests and responses made by the system. Thus no one can be held accountable for certain actions that is taken.
 			\paragraph{Deployment} The system does not deploy at all (the code does not compile).
+			\paragraph{Architectural Patterns} REST was not adhered to properly, no services were accessible from a web front-end or a mobile-device client.
 \end{document}
